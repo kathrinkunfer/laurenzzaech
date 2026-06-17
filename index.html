@@ -29,24 +29,6 @@
     position: relative;
   }
 
-  /* ---------- Static wrestling silhouette (background) ---------- */
-  .scene {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .wrestlers {
-    position: absolute;
-    bottom: 5vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(720px, 78vw);
-    opacity: 0.13;
-  }
-
   /* ---------- Content ---------- */
   .content {
     position: relative;
@@ -123,56 +105,6 @@
 </style>
 </head>
 <body>
-  <div class="scene" aria-hidden="true">
-    <!-- Static wrestling silhouette: two wrestlers in a clinch / tie-up -->
-    <svg class="wrestlers" viewBox="0 0 760 380" fill="var(--blue)" xmlns="http://www.w3.org/2000/svg">
-      <!-- mat line -->
-      <rect x="60" y="338" width="640" height="6" rx="3" opacity="0.55"/>
-
-      <!-- Wrestler A (left, driving in for a single-leg) -->
-      <g>
-        <!-- head -->
-        <circle cx="250" cy="150" r="34"/>
-        <!-- back / torso bent forward -->
-        <path d="M250 182
-                 q34 6 60 30
-                 q34 32 86 44
-                 l-6 30
-                 q-66 -12 -108 -50
-                 q-30 -28 -60 -22
-                 q-30 8 -34 -30
-                 q-2 -24 16 -32 z"/>
-        <!-- trailing arm -->
-        <path d="M236 196 q-44 18 -60 70 l26 14 q18 -44 52 -58 z"/>
-        <!-- back leg posted -->
-        <path d="M214 250 q-10 44 -34 86 l28 2 q26 -42 36 -82 z"/>
-        <!-- lead leg driving -->
-        <path d="M256 252 q14 40 44 80 l24 -14 q-26 -40 -38 -76 z"/>
-      </g>
-
-      <!-- Wrestler B (right, defending, sprawling / collar tie) -->
-      <g>
-        <!-- head -->
-        <circle cx="486" cy="132" r="34"/>
-        <!-- torso, leaning over opponent -->
-        <path d="M486 164
-                 q-30 8 -44 44
-                 q-16 40 -70 58
-                 l8 30
-                 q66 -18 92 -64
-                 q14 -26 38 -28
-                 q30 -2 28 -40
-                 q-2 -22 -20 -28
-                 q-18 -6 -32 4 z"/>
-        <!-- defending arm / collar tie reaching to A's head -->
-        <path d="M470 176 q-50 6 -94 -8 l-6 28 q50 16 102 8 z"/>
-        <!-- legs sprawled back -->
-        <path d="M504 244 q22 40 16 92 l-28 -2 q0 -48 -16 -84 z"/>
-        <path d="M540 240 q30 36 40 92 l-28 6 q-14 -52 -38 -84 z"/>
-      </g>
-    </svg>
-  </div>
-
   <main class="content">
     <h1 class="title"><img class="logo-img" src="logo.png" alt="Laurenz Zäch" /></h1>
     <p class="subtitle">Grappling Coach&nbsp;&nbsp;|&nbsp;&nbsp;Personal Training</p>
