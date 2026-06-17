@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Laurenz Zäch — Grappling Coach</title>
+<meta name="description" content="Laurenz Zäch — Grappling Coach & Personal Training. Coming soon." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --pink: #f6c6e3;
+    --blue: #2e16e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+
+  body {
+    font-family: "Montserrat", system-ui, sans-serif;
+    background: var(--pink);
+    color: var(--blue);
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* ---------- Static wrestling silhouette (background) ---------- */
+  .scene {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrestlers {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(720px, 78vw);
+    opacity: 0.13;
+  }
+
+  /* ---------- Content ---------- */
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 6vw;
+  }
+
+  .title {
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    color: var(--blue);
+    font-size: clamp(3.2rem, 12vw, 9rem);
+    line-height: 1.05;
+    letter-spacing: 0.005em;
+    transform: rotate(-3deg);
+    opacity: 0;
+    animation: rise 1.1s cubic-bezier(.2,.7,.2,1) 0.15s forwards;
+    text-shadow: 0 6px 24px rgba(46, 22, 232, 0.18);
+  }
+
+  /* Optional real-logo image: drop logo.png/svg in the repo and it replaces the text */
+  .logo-img {
+    max-width: min(820px, 88vw);
+    height: auto;
+    /* logo is blue-on-white -> multiply drops the white onto the pink */
+    mix-blend-mode: multiply;
+    opacity: 0;
+    animation: rise 1.1s cubic-bezier(.2,.7,.2,1) 0.15s forwards;
+  }
+
+  .subtitle {
+    margin-top: clamp(0.6rem, 2vw, 1.2rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: clamp(0.8rem, 2.2vw, 1.4rem);
+    opacity: 0;
+    animation: rise 1.1s cubic-bezier(.2,.7,.2,1) 0.5s forwards;
+  }
+
+  .soon {
+    margin-top: clamp(3rem, 9vw, 7rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: clamp(0.75rem, 1.8vw, 1.05rem);
+    opacity: 0;
+    animation: rise 1.1s cubic-bezier(.2,.7,.2,1) 0.85s forwards;
+  }
+
+  .soon::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--blue);
+    margin: 0.9rem auto 0;
+    border-radius: 2px;
+    animation: line 1.4s ease 1.2s forwards;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(26px) rotate(var(--r, 0deg)); }
+    to   { opacity: 1; transform: translateY(0) rotate(var(--r, 0deg)); }
+  }
+  .title { --r: 0deg; transform: rotate(0deg); }
+
+  @keyframes line { to { width: 120px; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; opacity: 1 !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="scene" aria-hidden="true">
+    <!-- Static wrestling silhouette: two wrestlers in a clinch / tie-up -->
+    <svg class="wrestlers" viewBox="0 0 760 380" fill="var(--blue)" xmlns="http://www.w3.org/2000/svg">
+      <!-- mat line -->
+      <rect x="60" y="338" width="640" height="6" rx="3" opacity="0.55"/>
+
+      <!-- Wrestler A (left, driving in for a single-leg) -->
+      <g>
+        <!-- head -->
+        <circle cx="250" cy="150" r="34"/>
+        <!-- back / torso bent forward -->
+        <path d="M250 182
+                 q34 6 60 30
+                 q34 32 86 44
+                 l-6 30
+                 q-66 -12 -108 -50
+                 q-30 -28 -60 -22
+                 q-30 8 -34 -30
+                 q-2 -24 16 -32 z"/>
+        <!-- trailing arm -->
+        <path d="M236 196 q-44 18 -60 70 l26 14 q18 -44 52 -58 z"/>
+        <!-- back leg posted -->
+        <path d="M214 250 q-10 44 -34 86 l28 2 q26 -42 36 -82 z"/>
+        <!-- lead leg driving -->
+        <path d="M256 252 q14 40 44 80 l24 -14 q-26 -40 -38 -76 z"/>
+      </g>
+
+      <!-- Wrestler B (right, defending, sprawling / collar tie) -->
+      <g>
+        <!-- head -->
+        <circle cx="486" cy="132" r="34"/>
+        <!-- torso, leaning over opponent -->
+        <path d="M486 164
+                 q-30 8 -44 44
+                 q-16 40 -70 58
+                 l8 30
+                 q66 -18 92 -64
+                 q14 -26 38 -28
+                 q30 -2 28 -40
+                 q-2 -22 -20 -28
+                 q-18 -6 -32 4 z"/>
+        <!-- defending arm / collar tie reaching to A's head -->
+        <path d="M470 176 q-50 6 -94 -8 l-6 28 q50 16 102 8 z"/>
+        <!-- legs sprawled back -->
+        <path d="M504 244 q22 40 16 92 l-28 -2 q0 -48 -16 -84 z"/>
+        <path d="M540 240 q30 36 40 92 l-28 6 q-14 -52 -38 -84 z"/>
+      </g>
+    </svg>
+  </div>
+
+  <main class="content">
+    <h1 class="title"><img class="logo-img" src="logo.png" alt="Laurenz Zäch" /></h1>
+    <p class="subtitle">Grappling Coach&nbsp;&nbsp;|&nbsp;&nbsp;Personal Training</p>
+    <p class="soon">Coming Soon</p>
+  </main>
+</body>
+</html>
