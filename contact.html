@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Laurenz Zäch</title>
+<meta name="description" content="Get in touch with Laurenz Zäch — Grappling Coach & Personal Training." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --pink: #f6c6e3;
+    --blue: #2e16e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { min-height: 100%; }
+
+  body {
+    font-family: "Montserrat", system-ui, sans-serif;
+    background: var(--pink);
+    color: var(--blue);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6vh 6vw;
+  }
+
+  .logo-img {
+    max-width: min(520px, 80vw);
+    height: auto;
+    mix-blend-mode: multiply;
+    opacity: 0;
+    animation: rise 1s cubic-bezier(.2,.7,.2,1) 0.1s forwards;
+  }
+
+  .tagline {
+    margin-top: 0.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: clamp(0.7rem, 1.8vw, 1rem);
+    text-align: center;
+    opacity: 0;
+    animation: rise 1s cubic-bezier(.2,.7,.2,1) 0.35s forwards;
+  }
+
+  .card {
+    width: min(560px, 100%);
+    margin-top: clamp(2rem, 5vw, 3rem);
+    opacity: 0;
+    animation: rise 1s cubic-bezier(.2,.7,.2,1) 0.5s forwards;
+  }
+
+  .card h1 {
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 7vw, 3.4rem);
+    text-align: center;
+    margin-bottom: 1.6rem;
+  }
+
+  .field { margin-bottom: 1.1rem; }
+
+  label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.45rem;
+  }
+
+  input, textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--blue);
+    background: rgba(255, 255, 255, 0.55);
+    border: 2px solid var(--blue);
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    outline: none;
+    transition: background 0.2s, box-shadow 0.2s;
+  }
+
+  input::placeholder, textarea::placeholder { color: rgba(46, 22, 232, 0.45); }
+
+  input:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 0 4px rgba(46, 22, 232, 0.15);
+  }
+
+  textarea { resize: vertical; min-height: 140px; }
+
+  button {
+    width: 100%;
+    margin-top: 0.4rem;
+    font-family: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.95rem;
+    color: var(--pink);
+    background: var(--blue);
+    border: none;
+    border-radius: 12px;
+    padding: 0.95rem 1rem;
+    cursor: pointer;
+    transition: transform 0.12s, opacity 0.2s;
+  }
+
+  button:hover { transform: translateY(-2px); }
+  button:active { transform: translateY(0); }
+  button:disabled { opacity: 0.6; cursor: default; transform: none; }
+
+  .status {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 600;
+    min-height: 1.4em;
+    font-size: 0.95rem;
+  }
+
+  .back {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    text-align: center;
+  }
+  .back a { color: var(--blue); text-decoration: none; border-bottom: 2px solid transparent; transition: border-color 0.2s; }
+  .back a:hover { border-color: var(--blue); }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; opacity: 1 !important; }
+  }
+</style>
+</head>
+<body>
+  <img class="logo-img" src="logo.png" alt="Laurenz Zäch" />
+  <p class="tagline">Grappling Coach&nbsp;&nbsp;|&nbsp;&nbsp;Personal Training</p>
+
+  <section class="card">
+    <h1>Contact me</h1>
+
+    <form id="contact-form">
+      <!-- Web3Forms access key (tied to laurenz@laurenzzaech.ch) -->
+      <input type="hidden" name="access_key" value="ff9651b4-a192-4464-9b91-e506e7a34489" />
+      <!-- Where replies go / subject shown in the email -->
+      <input type="hidden" name="subject" value="New message from laurenzzaech.ch contact form" />
+      <input type="hidden" name="from_name" value="Laurenz Zäch Website" />
+      <!-- Honeypot spam trap -->
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" placeholder="Your name" required />
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="you@example.com" required />
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="How can I help you?" required></textarea>
+      </div>
+
+      <button type="submit" id="submit-btn">Send message</button>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="back"><a href="index.html">← Back</a></p>
+  </section>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('status');
+    const btn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      btn.disabled = true;
+      status.textContent = 'Sending…';
+
+      const data = Object.fromEntries(new FormData(form));
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const json = await res.json();
+        if (json.success) {
+          status.textContent = '✓ Thank you! Your message has been sent.';
+          form.reset();
+        } else {
+          status.textContent = '⚠ Something went wrong: ' + (json.message || 'please try again.');
+        }
+      } catch (err) {
+        status.textContent = '⚠ Network error — please try again.';
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
