@@ -99,23 +99,26 @@
 
   @keyframes line { to { width: 120px; } }
 
-  .contact-link {
-    margin-top: 1.4rem;
+  .nav-contact {
+    position: fixed;
+    top: clamp(1.2rem, 3vw, 2rem);
+    right: clamp(1.2rem, 3vw, 2.4rem);
+    z-index: 2;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.18em;
-    font-size: clamp(0.7rem, 1.6vw, 0.9rem);
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
     opacity: 0;
-    animation: rise 1.1s cubic-bezier(.2,.7,.2,1) 1.1s forwards;
+    animation: rise 1.1s cubic-bezier(.2,.7,.2,1) 1s forwards;
   }
-  .contact-link a {
+  .nav-contact a {
     color: var(--blue);
     text-decoration: none;
     border-bottom: 2px solid var(--blue);
     padding-bottom: 2px;
     transition: opacity 0.2s;
   }
-  .contact-link a:hover { opacity: 0.65; }
+  .nav-contact a:hover { opacity: 0.65; }
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; opacity: 1 !important; }
@@ -123,11 +126,12 @@
 </style>
 </head>
 <body>
+  <nav class="nav-contact"><a href="contact.html">Contact</a></nav>
+
   <main class="content">
     <h1 class="title"><img class="logo-img" src="logo.png" alt="Laurenz Zäch" /></h1>
     <p class="subtitle">Grappling Coach&nbsp;&nbsp;|&nbsp;&nbsp;Personal Training</p>
     <p class="soon">Coming Soon</p>
-    <p class="contact-link"><a href="contact.html">Contact me</a></p>
   </main>
 </body>
 </html>
