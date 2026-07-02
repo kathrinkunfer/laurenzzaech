@@ -193,3 +193,26 @@ a { color: inherit; text-decoration: none; }
   .footer-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; } .flip-inner, .learn-card .flip-inner { transition: none; } }
+
+/* ---------- FAQ page (accordion) ---------- */
+.faq-page { background: var(--white); color: var(--ink); padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(3.5rem,8vw,6rem); }
+.faq-intro { max-width: 720px; margin: 0 auto clamp(2rem,5vw,3rem); text-align: center; }
+.faq-intro .sub { color: var(--blue); margin-top: 0.4rem; }
+.faq-list { max-width: 780px; margin: 0 auto; }
+details.faq-q { border-top: 1px solid #e6e2db; }
+details.faq-q:last-child { border-bottom: 1px solid #e6e2db; }
+details.faq-q summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; padding: 1.25rem 0; font-family: var(--font-title); font-weight: 600; font-size: clamp(1rem, 2.3vw, 1.2rem); letter-spacing: var(--ls-title); }
+details.faq-q summary::-webkit-details-marker { display: none; }
+.faq-q .plus { flex-shrink: 0; width: 20px; height: 20px; position: relative; transition: transform .3s ease; }
+.faq-q .plus::before, .faq-q .plus::after { content: ""; position: absolute; background: var(--blue); border-radius: 2px; }
+.faq-q .plus::before { left: 0; right: 0; top: 9px; height: 2px; }
+.faq-q .plus::after { top: 0; bottom: 0; left: 9px; width: 2px; transition: opacity .3s ease; }
+details[open] .plus { transform: rotate(180deg); }
+details[open] .plus::after { opacity: 0; }
+.faq-a { padding: 0 0 1.4rem; color: var(--ink-2); font-size: var(--fs-body); max-width: 64ch; line-height: 1.65; }
+
+/* card mobile optimisation */
+@media (max-width: 620px) {
+  .flip-card, .learn-card { min-height: 340px; }
+  .price-card { padding: 1.5rem 1.4rem; }
+}
