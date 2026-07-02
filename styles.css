@@ -133,3 +133,34 @@ a { color: inherit; text-decoration: none; }
   .footer-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; } }
+
+/* ---------- Training page ---------- */
+.page-hero { position: relative; min-height: clamp(62vh, 78vh, 820px); background: #111 center 30%/cover no-repeat; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: var(--white); padding: 4rem 1.2rem; }
+.page-hero::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.42); }
+.page-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 32%; background: linear-gradient(to bottom, transparent, var(--black)); }
+.page-hero .ph-inner { position: relative; z-index: 1; }
+.page-hero h1 { font-family: var(--sans); font-weight: 700; font-size: clamp(2.6rem, 8vw, 5rem); letter-spacing: -0.01em; }
+.page-hero p { max-width: 46ch; margin: 1rem auto 0; color: #e6e4e6; font-size: clamp(0.98rem, 2.2vw, 1.12rem); }
+
+/* training flip banner (on black) */
+.learn-row { background: var(--black); display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; padding: clamp(1.4rem, 4vw, 3rem) clamp(0.6rem,2vw,1.4rem); }
+.learn-card { perspective: 1400px; min-height: clamp(360px, 40vw, 520px); }
+.learn-card .flip-inner { position: relative; width: 100%; height: 100%; min-height: inherit; transition: transform .8s cubic-bezier(.2,.7,.2,1); transform-style: preserve-3d; }
+.learn-card:hover .flip-inner, .learn-card:focus-within .flip-inner { transform: rotateY(180deg); }
+.learn-front, .learn-back { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: clamp(1.4rem, 3vw, 2.2rem); }
+.learn-front { background: #222 center/cover no-repeat; color: #fff; }
+.learn-front::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+.learn-label { position: relative; z-index: 1; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: #e9e6ea; margin-bottom: 0.3rem; }
+.learn-front h3 { position: relative; z-index: 1; font-family: var(--serif); font-style: italic; font-weight: 500; font-size: clamp(1.7rem, 4vw, 2.6rem); }
+.learn-back { transform: rotateY(180deg); background: var(--blue); color: #fff; }
+.learn-back p { font-size: clamp(1rem, 2.4vw, 1.2rem); max-width: 22ch; line-height: 1.6; }
+
+/* "A way of thinking" split */
+.think { background: var(--white); color: var(--ink); padding: clamp(4rem, 9vw, 7rem) 0; }
+.think-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 4rem); align-items: center; }
+.think h2 { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.1; }
+.think p { color: var(--ink-2); font-size: 1.05rem; max-width: 46ch; margin-bottom: 1.6rem; }
+@media (max-width: 760px) {
+  .learn-row { grid-template-columns: 1fr; }
+  .think-grid { grid-template-columns: 1fr; }
+}
