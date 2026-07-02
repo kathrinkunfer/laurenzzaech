@@ -3,265 +3,153 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contact — Laurenz Zäch</title>
-<meta name="description" content="Get in touch with Laurenz Zäch — Grappling Coach & Personal Training." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@500;600&display=swap" rel="stylesheet" />
-<style>
-  :root {
-    --pink: #f6c6e3;
-    --blue: #2e16e8;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { min-height: 100%; }
-
-  body {
-    font-family: "Montserrat", system-ui, sans-serif;
-    background: var(--pink);
-    color: var(--blue);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 6vh 6vw;
-  }
-
-  .logo-img {
-    max-width: min(520px, 80vw);
-    height: auto;
-    mix-blend-mode: multiply;
-    opacity: 0;
-    animation: rise 1s cubic-bezier(.2,.7,.2,1) 0.1s forwards;
-  }
-
-  .tagline {
-    margin-top: 0.4rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: clamp(0.7rem, 1.8vw, 1rem);
-    text-align: center;
-    opacity: 0;
-    animation: rise 1s cubic-bezier(.2,.7,.2,1) 0.35s forwards;
-  }
-
-  .card {
-    width: min(560px, 100%);
-    margin-top: clamp(2rem, 5vw, 3rem);
-    opacity: 0;
-    animation: rise 1s cubic-bezier(.2,.7,.2,1) 0.5s forwards;
-  }
-
-  .card h1 {
-    font-family: "Montserrat", system-ui, sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: clamp(1.1rem, 3vw, 1.6rem);
-    text-align: center;
-    margin-bottom: 1.6rem;
-  }
-
-  .field { margin-bottom: 1.1rem; }
-
-  label {
-    display: block;
-    font-weight: 600;
-    font-size: 0.82rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.45rem;
-  }
-
-  input, textarea {
-    width: 100%;
-    font-family: inherit;
-    font-size: 1rem;
-    color: var(--blue);
-    background: rgba(255, 255, 255, 0.55);
-    border: 2px solid var(--blue);
-    border-radius: 12px;
-    padding: 0.8rem 1rem;
-    outline: none;
-    transition: background 0.2s, box-shadow 0.2s;
-  }
-
-  input::placeholder, textarea::placeholder { color: rgba(46, 22, 232, 0.45); }
-
-  input:focus, textarea:focus {
-    background: rgba(255, 255, 255, 0.85);
-    box-shadow: 0 0 0 4px rgba(46, 22, 232, 0.15);
-  }
-
-  textarea { resize: vertical; min-height: 140px; }
-
-  button {
-    width: 100%;
-    margin-top: 0.4rem;
-    font-family: inherit;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: 0.95rem;
-    color: var(--pink);
-    background: var(--blue);
-    border: none;
-    border-radius: 12px;
-    padding: 0.95rem 1rem;
-    cursor: pointer;
-    transition: transform 0.12s, opacity 0.2s;
-  }
-
-  button:hover { transform: translateY(-2px); }
-  button:active { transform: translateY(0); }
-  button:disabled { opacity: 0.6; cursor: default; transform: none; }
-
-  .status {
-    margin-top: 1rem;
-    text-align: center;
-    font-weight: 600;
-    min-height: 1.4em;
-    font-size: 0.95rem;
-  }
-
-  .back {
-    margin-top: 2rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    text-align: center;
-  }
-  .back a { color: var(--blue); text-decoration: none; border-bottom: 2px solid transparent; transition: border-color 0.2s; }
-  .back a:hover { border-color: var(--blue); }
-
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(22px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  /* form leaving */
-  .fade-out {
-    animation: fadeOut 0.45s ease forwards;
-    pointer-events: none;
-  }
-  @keyframes fadeOut {
-    to { opacity: 0; transform: translateY(-14px) scale(0.98); }
-  }
-
-  /* thank-you panel */
-  .thank-you {
-    text-align: center;
-    padding: 1rem 0;
-    animation: rise 0.6s cubic-bezier(.2,.7,.2,1) forwards;
-  }
-  .thank-you h2 {
-    font-family: "Kaushan Script", cursive;
-    font-weight: 400;
-    font-size: clamp(2.4rem, 8vw, 3.6rem);
-    margin: 0.6rem 0 0.3rem;
-  }
-  .thank-you p {
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    font-size: clamp(0.8rem, 2vw, 1rem);
-  }
-
-  .checkmark svg { width: 92px; height: 92px; }
-  .ck-circle, .ck-check {
-    fill: none;
-    stroke: var(--blue);
-    stroke-width: 5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .ck-circle {
-    stroke-dasharray: 240;
-    stroke-dashoffset: 240;
-    animation: draw 0.6s ease forwards 0.1s;
-  }
-  .ck-check {
-    stroke-dasharray: 70;
-    stroke-dashoffset: 70;
-    animation: draw 0.4s ease forwards 0.55s, pop 0.3s ease 0.95s;
-  }
-  @keyframes draw { to { stroke-dashoffset: 0; } }
-  @keyframes pop {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.12); }
-    100% { transform: scale(1); }
-  }
-  .checkmark { transform-origin: center; }
-
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation: none !important; opacity: 1 !important; }
-  }
-</style>
+<title>Book a Trial — Laurenz Zäch</title>
+<meta name="description" content="Book a trial for Nogi Jiu Jitsu and grappling coaching in Zürich. Private or semi-private, beginner friendly. Send a request and I'll reply by email." />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+<link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <img class="logo-img" src="/logo.png" alt="Laurenz Zäch" />
-  <p class="tagline">Grappling Coach&nbsp;&nbsp;|&nbsp;&nbsp;Personal Training</p>
-
-  <section class="card">
-    <h1>Contact me</h1>
-
-    <form id="contact-form">
-      <!-- Web3Forms access key (tied to laurenz@laurenzzaech.ch) -->
-      <input type="hidden" name="access_key" value="ff9651b4-a192-4464-9b91-e506e7a34489" />
-      <!-- Where replies go / subject shown in the email -->
-      <input type="hidden" name="subject" value="New message from laurenzzaech.ch contact form" />
-      <input type="hidden" name="from_name" value="Laurenz Zäch Website" />
-      <!-- Honeypot spam trap -->
-      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
-
-      <div class="field">
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" placeholder="Your name" required />
-      </div>
-
-      <div class="field">
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" placeholder="you@example.com" required />
-      </div>
-
-      <div class="field">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="How can I help you?" required></textarea>
-      </div>
-
-      <button type="submit" id="submit-btn">Send message</button>
-      <p class="status" id="status" role="status" aria-live="polite"></p>
-    </form>
-
-    <div class="thank-you" id="thank-you" hidden>
-      <div class="checkmark" aria-hidden="true">
-        <svg viewBox="0 0 80 80">
-          <circle class="ck-circle" cx="40" cy="40" r="36" />
-          <path class="ck-check" d="M24 41 l11 11 l21 -23" />
-        </svg>
-      </div>
-      <h2>Thank you!</h2>
-      <p>Your message has been sent.</p>
+  <header class="site-header">
+    <div class="wrap">
+      <button class="menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
+  </header>
 
-    <p class="back"><a href="/">← Back</a></p>
-  </section>
+  <nav class="menu-overlay" aria-label="Main menu">
+    <button class="menu-close" aria-label="Close menu">✕</button>
+    <a href="/">Home</a>
+    <a href="/training/">Training</a>
+    <a href="/pricing/">Pricing</a>
+    <a href="/faq/">FAQ</a>
+    <a href="/#about">About Me</a>
+    <a href="/contact/">Book a Trial</a>
+    <a href="/contact/">Contact</a>
+  </nav>
 
+  <main>
+    <!-- Hero -->
+    <section class="page-hero short" style="background-image:url('/assets/about.jpg')">
+      <div class="ph-inner">
+        <h1>Book a trial</h1>
+        <p>Tell me a little about you and what you're after. I'll reply by email, usually within a day.</p>
+      </div>
+    </section>
+
+    <!-- Booking form -->
+    <section class="book">
+      <div class="wrap">
+        <div class="book-grid">
+          <div>
+            <form id="book-form" class="form">
+              <input type="hidden" name="access_key" value="ff9651b4-a192-4464-9b91-e506e7a34489" />
+              <input type="hidden" name="subject" value="New booking request from laurenzzaech.ch" />
+              <input type="hidden" name="from_name" value="laurenzzaech.ch booking" />
+              <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" placeholder="Your name" required />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="you@example.com" required />
+              </div>
+
+              <div class="field">
+                <label for="format">What are you after?</label>
+                <select id="format" name="format">
+                  <option>Private (one to one)</option>
+                  <option>Semi-private (with a partner)</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="experience">Experience <span class="opt">(optional)</span></label>
+                <select id="experience" name="experience">
+                  <option>Complete beginner</option>
+                  <option>Some experience</option>
+                  <option>Experienced grappler</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="availability">Preferred days &amp; times <span class="opt">(optional)</span></label>
+                <input id="availability" type="text" name="availability" placeholder="e.g. weekday evenings, weekend mornings" />
+              </div>
+
+              <div class="field">
+                <label for="message">Message <span class="opt">(optional)</span></label>
+                <textarea id="message" name="message" rows="4" placeholder="Anything you'd like me to know, or something you want to work on"></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit" id="submit-btn">Send request</button>
+              <p class="form-note">Your details are only used to reply to your request.</p>
+              <p class="form-status" id="status" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="thank-you" id="thank-you" hidden>
+              <h3>Thanks, request sent.</h3>
+              <p>I'll get back to you by email, usually within a day.</p>
+            </div>
+          </div>
+
+          <aside class="book-aside">
+            <p><strong>Prefer to write directly?</strong></p>
+            <p><a href="mailto:laurenz@laurenzzaech.ch">Email →</a></p>
+            <p><a href="https://www.instagram.com/laurenzzaech" target="_blank" rel="noopener">Instagram →</a></p>
+            <p style="margin-top:1.2rem;">No memberships, no lock-in. You'll get a trial class and then decide what suits you.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-name"><img class="footer-logo" src="/assets/footer-logo.png" alt="Laurenz Zäch" /></div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="/training/">Training</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/#about">About Me</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/contact/">Book a Trial</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Reach Out</h4>
+        <ul>
+          <li><a href="/contact/">Contact Me</a></li>
+        </ul>
+        <div class="socials">
+          <a href="https://www.instagram.com/laurenzzaech" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="wrap">© 2026 Laurenz Zäch · Brazilian Jiu Jitsu, Zürich</div></div>
+  </footer>
+
+  <script src="/app.js"></script>
   <script>
-    const form = document.getElementById('contact-form');
+    const form = document.getElementById('book-form');
     const status = document.getElementById('status');
     const btn = document.getElementById('submit-btn');
     const thankYou = document.getElementById('thank-you');
-
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       btn.disabled = true;
       status.textContent = 'Sending…';
-
       const data = Object.fromEntries(new FormData(form));
       try {
         const res = await fetch('https://api.web3forms.com/submit', {
@@ -271,18 +159,14 @@
         });
         const json = await res.json();
         if (json.success) {
-          // animate the form out, then reveal the thank-you panel
-          form.classList.add('fade-out');
-          form.addEventListener('animationend', () => {
-            form.hidden = true;
-            thankYou.hidden = false;
-          }, { once: true });
+          form.style.display = 'none';
+          thankYou.hidden = false;
         } else {
-          status.textContent = '⚠ Something went wrong: ' + (json.message || 'please try again.');
+          status.textContent = '⚠ ' + (json.message || 'Something went wrong, please try again.');
           btn.disabled = false;
         }
       } catch (err) {
-        status.textContent = '⚠ Network error — please try again.';
+        status.textContent = '⚠ Network error. Please try again.';
         btn.disabled = false;
       }
     });
