@@ -286,3 +286,10 @@ details[open] .plus::after { opacity: 0; }
 .cla-card h3 { font-family: var(--font-title); font-weight: 600; font-size: var(--fs-h3); letter-spacing: var(--ls-title); margin-bottom: 0.5rem; }
 .cla-card p { color: var(--ink-2); font-size: 0.98rem; }
 @media (max-width:760px){ .cla-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Language switch ---------- */
+.site-header .wrap { justify-content: space-between; }
+.lang-switch { pointer-events: auto; display: flex; gap: 1px; }
+.lang-switch button { background: none; border: none; cursor: pointer; font-family: var(--sans); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.03em; color: var(--blue); opacity: 0.5; padding: 4px 5px; transition: opacity .2s; }
+.lang-switch button:hover { opacity: 0.85; }
+.lang-switch button.active { opacity: 1; text-decoration: underline; text-underline-offset: 3px; }
