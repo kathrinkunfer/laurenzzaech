@@ -242,3 +242,7 @@ details[open] .plus::after { opacity: 0; }
 .book-aside p { color: var(--ink-2); font-size: var(--fs-body); margin-bottom: 1rem; }
 .book-aside a { color: var(--blue); font-weight: 500; }
 @media (max-width: 760px) { .book-grid { grid-template-columns: 1fr; } }
+
+/* booking form subheadings + slots */
+.form-subhead { font-family: var(--font-title); font-weight: 700; font-size: 1.05rem; letter-spacing: var(--ls-title); margin: 1.6rem 0 0.8rem; padding-top: 1.2rem; border-top: 1px solid #e6e2db; }
+.field .hint { font-size: 0.8rem; color: var(--ink-2); margin-top: 0.4rem; }
