@@ -2,7 +2,7 @@
 (function () {
   const MAP = {
 "Home": {
-"de": "Start",
+"de": "Home",
 "es": "Inicio",
 "pt": "Início"
 },
@@ -82,17 +82,17 @@
 "pt": "Treino personalizado em Zurique"
 },
 "No-Gi BJJ and grappling in Zürich. Whether you have never stepped on the mat or have trained for a while, I work in a personal setting built for you.": {
-"de": "No-Gi BJJ und Grappling in Zürich. Ob du noch nie auf der Matte standest oder schon eine Weile trainierst – ich arbeite in einem persönlichen Rahmen, der auf dich zugeschnitten ist.",
+"de": "No-Gi BJJ und Grappling in Zürich. No Gi BJJ und Grappling in Zürich. Persönliches Training in privaten oder semiprivaten Lektionen für Einsteiger und Fortgeschrittene. Individuell, zielgerichtet und auf dein Niveau abgestimmt.",
 "es": "BJJ No-Gi y grappling en Zúrich. Tanto si nunca has pisado el tatami como si llevas tiempo entrenando, trabajo en un entorno personal hecho a tu medida.",
 "pt": "BJJ No-Gi e grappling em Zurique. Se você nunca pisou no tatame ou já treina há algum tempo, trabalho num ambiente pessoal feito para você."
 },
 "Coaching built around you": {
-"de": "Training, das sich nach dir richtet",
+"de": "Training, das auf dich abgestimmt ist",
 "es": "Entrenamiento pensado para ti",
 "pt": "Treino feito para você"
 },
 "No-Gi Jiu Jitsu and grappling, one to one or with a partner. Beginner friendly, at your own pace.": {
-"de": "No-Gi Jiu Jitsu und Grappling, eins zu eins oder mit Partner. Anfängerfreundlich, in deinem Tempo.",
+"de": "Privat oder zu zweit. Ob Anfänger oder erfahren, du trainierst in deinem eigenen Tempo und mit individuellem Coaching.",
 "es": "Jiu Jitsu No-Gi y grappling, individual o con pareja. Apto para principiantes, a tu ritmo.",
 "pt": "Jiu Jitsu No-Gi e grappling, individual ou com parceiro. Ideal para iniciantes, no seu ritmo."
 },
@@ -102,7 +102,7 @@
 "pt": "Preços e pacotes"
 },
 "Simple, fair rates with no memberships and no lock in. See what works for you.": {
-"de": "Einfache, faire Preise ohne Mitgliedschaft und ohne Bindung. Finde, was zu dir passt.",
+"de": "Faire Tarife ohne Mitgliedschaft oder langfristige Verpflichtung. Wähle das Angebot, das am besten zu dir passt.",
 "es": "Tarifas simples y justas, sin membresías ni permanencia. Elige lo que te convenga.",
 "pt": "Preços simples e justos, sem mensalidade e sem fidelidade. Veja o que funciona para você."
 },
@@ -127,22 +127,22 @@
 "pt": "Eu sou o Laurenz."
 },
 "Grappling has been part of my life for ten years, and helping others find their way into it the part I enjoy most. I coach No-Gi Jiu Jitsu and grappling in a calm, friendly setting. You do not need any experience, just a bit of curiosity. The rest we figure out together on the mat.": {
-"de": "Grappling ist seit zehn Jahren Teil meines Lebens, und anderen den Einstieg zu ermöglichen, macht mir am meisten Freude. Ich unterrichte No-Gi Jiu Jitsu und Grappling in einer ruhigen, freundlichen Atmosphäre. Du brauchst keine Erfahrung, nur ein bisschen Neugier. Den Rest finden wir gemeinsam auf der Matte heraus.",
+"de": "Grappling gehört seit vielen Jahren zu meinem Leben und ich gebe meine Erfahrung gerne weiter. In meinem Unterricht für No Gi Jiu Jitsu und Grappling steht das persönliche Coaching im Vordergrund. Du musst nichts können. Nur bereit sein, etwas Neues auszuprobieren.",
 "es": "El grappling forma parte de mi vida desde hace diez años, y ayudar a otros a iniciarse es lo que más disfruto. Enseño Jiu Jitsu No-Gi y grappling en un ambiente tranquilo y cercano. No necesitas experiencia, solo un poco de curiosidad. El resto lo descubrimos juntos en el tatami.",
 "pt": "O grappling faz parte da minha vida há dez anos, e ajudar os outros a começar é o que mais gosto. Ensino Jiu Jitsu No-Gi e grappling num ambiente calmo e acolhedor. Você não precisa de experiência, só um pouco de curiosidade. O resto a gente descobre junto no tatame."
 },
 "Choose what suits you": {
-"de": "Wähle, was zu dir passt",
+"de": "Das Training, das zu dir passt",
 "es": "Elige lo que más te convenga",
 "pt": "Escolha o que combina com você"
 },
 "Every session is built around you": {
-"de": "Jede Einheit dreht sich um dich",
+"de": "Jede Stunde richtet sich nach dir.",
 "es": "Cada sesión gira en torno a ti",
 "pt": "Cada sessão é feita em torno de você"
 },
 "You can do that on your own, or together with a partner. Both work well, and many people move between the two over time.": {
-"de": "Das kannst du allein machen oder gemeinsam mit einem Partner. Beides funktioniert gut, und viele wechseln mit der Zeit zwischen beidem.",
+"de": "Im Training geht es immer um dich. Du kannst alleine kommen oder mit jemandem zusammen trainieren. Viele machen auch beides, je nach Phase.",
 "es": "Puedes hacerlo por tu cuenta o junto a una pareja. Ambas opciones funcionan bien, y muchas personas alternan entre las dos con el tiempo.",
 "pt": "Você pode fazer isso sozinho ou com um parceiro. As duas formas funcionam bem, e muita gente alterna entre elas com o tempo."
 },
@@ -162,17 +162,17 @@
 "pt": "Totalmente no seu ritmo. Focamos exatamente no que você está treinando. Uma ótima escolha se você prefere atenção total ao seu jogo, ou simplesmente começar sozinho."
 },
 "You learn with a partner, keep each other motivated, and share your learning. Bring a friend, partner or colleague, or get in touch and we will find a good fit.": {
-"de": "Du lernst mit einem Partner, ihr motiviert euch gegenseitig und teilt euren Fortschritt. Bring einen Freund, Partner oder Kollegen mit – oder melde dich, und wir finden die passende Ergänzung.",
+"de": "Zu zweit macht es oft noch mehr Spass. Ihr trainiert gemeinsam, unterstützt euch gegenseitig und bleibt motiviert. Bring jemanden mit oder wir finden eine:n passende:n Partner:in.",
 "es": "Aprendes con una pareja, os motiváis mutuamente y compartís el aprendizaje. Trae a un amigo, pareja o compañero, o escríbeme y encontraremos a alguien que encaje.",
 "pt": "Você aprende com um parceiro, um motiva o outro e vocês compartilham o aprendizado. Traga um amigo, parceiro ou colega, ou entre em contato que a gente encontra alguém."
 },
 "Ready to step on the mat?": {
-"de": "Bereit für die Matte?",
+"de": "Bereit?",
 "es": "¿Listo para pisar el tatami?",
 "pt": "Pronto para pisar no tatame?"
 },
 "Start with a trial. No experience needed, no memberships, no pressure - just you, the mat, and a plan built around your goals.": {
-"de": "Starte mit einem Probetraining. Keine Erfahrung nötig, keine Mitgliedschaft, kein Druck – nur du, die Matte und ein Plan, der auf deine Ziele zugeschnitten ist.",
+"de": "Komm einfach für ein Probetraining vorbei. Du brauchst nichts zu können und musst dich zu nichts verpflichten. Einfach kommen und mitmachen.",
 "es": "Empieza con una clase de prueba. Sin experiencia, sin membresías, sin presión: solo tú, el tatami y un plan hecho para tus objetivos.",
 "pt": "Comece com uma aula experimental. Sem experiência, sem mensalidade, sem pressão — só você, o tatame e um plano feito para os seus objetivos."
 },
@@ -192,7 +192,7 @@
 "pt": "Fale comigo"
 },
 "Contact Me": {
-"de": "Kontaktiere mich",
+"de": "Schreib mir eine Nachricht",
 "es": "Contáctame",
 "pt": "Fale comigo"
 },
@@ -217,37 +217,37 @@
 "pt": "Um jeito de pensar e amor pelo jogo."
 },
 "Go beyond memorising techniques. By understanding the principles that connect them, you'll develop the confidence to adapt, solve problems, and make grappling your own.": {
-"de": "Geh über das reine Auswendiglernen von Techniken hinaus. Wenn du die Prinzipien verstehst, die sie verbinden, gewinnst du das Selbstvertrauen, dich anzupassen, Probleme zu lösen und dir das Grappling zu eigen zu machen.",
+"de": "Ich möchte dir nicht einfach nur Techniken zeigen, die du nachmachst. Mir ist wichtiger, dass du verstehst, wie Grappling funktioniert. Wenn du das System dahinter erkennst, kannst du in jeder Situation selbst Lösungen finden, statt nur feste Abläufe zu wiederholen.",
 "es": "Ve más allá de memorizar técnicas. Al entender los principios que las conectan, ganarás la confianza para adaptarte, resolver problemas y hacer tuyo el grappling.",
 "pt": "Vá além de decorar técnicas. Ao entender os princípios que as conectam, você ganha a confiança para se adaptar, resolver problemas e tornar o grappling seu."
 },
 "Independence": {
-"de": "Eigenständigkeit",
+"de": "Selbstständiges Denken",
 "es": "Autonomía",
 "pt": "Autonomia"
 },
 "Solve problems instead of waiting to hear the answer.": {
-"de": "Löse Probleme selbst, statt auf die Antwort zu warten.",
+"de": "Du lernst, Probleme selbst zu lösen, statt auf eine vorgegebene Antwort zu warten. So entwickelst du nach und nach mehr Sicherheit in deinen Entscheidungen.",
 "es": "Resuelve problemas en lugar de esperar la respuesta.",
 "pt": "Resolva problemas em vez de esperar pela resposta."
 },
 "Composure": {
-"de": "Gelassenheit",
+"de": "Bei dir bleiben",
 "es": "Serenidad",
 "pt": "Serenidade"
 },
 "Learn how to stay calm even under pressure.": {
-"de": "Lerne, auch unter Druck ruhig zu bleiben.",
+"de": "Du lernst, einen ruhigen Kopf zu behalten, auch wenn es auf der Matte hektisch, eng oder chaotisch wird. Mit der Zeit wirst du merken, dass du dich dadurch besser orientieren und klarer reagieren kannst.",
 "es": "Aprende a mantener la calma incluso bajo presión.",
 "pt": "Aprenda a manter a calma mesmo sob pressão."
 },
 "Curiosity": {
-"de": "Neugier",
+"de": "Entdecken",
 "es": "Curiosidad",
 "pt": "Curiosidade"
 },
 "The habit of asking yourself why and most importantly: to have fun.": {
-"de": "Die Angewohnheit, dich nach dem Warum zu fragen – und vor allem: Spaß zu haben.",
+"de": "Mit der Zeit verstehst du besser, wie Dinge funktionieren, und entwickelst richtig Freude daran, Neues auszuprobieren und zu entdecken.",
 "es": "El hábito de preguntarte por qué y, sobre todo: divertirte.",
 "pt": "O hábito de se perguntar por quê e, acima de tudo: se divertir."
 },
@@ -257,12 +257,12 @@
 "pt": "Como eu ensino"
 },
 "What is the CLA?": {
-"de": "Was ist der CLA?",
+"de": "Was ist CLA?",
 "es": "¿Qué es el CLA?",
 "pt": "O que é o CLA?"
 },
 "The Constraints-Led Approach (CLA) is a modern way of learning Jiu Jitsu. Instead of memorising long sequences of moves, you play games with small constraints - a limited grip, a specific goal, a position you must escape - and discover the solution yourself. It comes from ecological dynamics and the science of skill acquisition, and it's why our sessions feel less like copying and more like problem-solving.": {
-"de": "Der Constraints-Led Approach (CLA) ist eine moderne Art, Jiu Jitsu zu lernen. Statt lange Bewegungsabläufe auswendig zu lernen, spielst du Spiele mit kleinen Vorgaben – ein eingeschränkter Griff, ein bestimmtes Ziel, eine Position, aus der du entkommen musst – und findest die Lösung selbst. Er stammt aus der ökologischen Dynamik und der Wissenschaft des Kompetenzerwerbs, und deshalb fühlen sich unsere Einheiten weniger nach Nachahmen und mehr nach Problemlösen an.",
+"de": "Ich arbeite mit dem sogenannten Constraints-Led Approach, kurz CLA. Dabei lernst du Jiu Jitsu nicht über lange Technikabläufe, sondern über einfache, klare Situationen im Training. Du bekommst kleine Aufgaben wie einen Griff, ein Ziel oder eine Position, aus der du dich befreien sollst. So bist du direkt im Geschehen, probierst aus und findest deine eigenen Lösungen. Das macht das Lernen natürlicher und hilft dir, wirklich zu verstehen, was auf der Matte passiert.",
 "es": "El Constraints-Led Approach (CLA) es una forma moderna de aprender Jiu Jitsu. En lugar de memorizar largas secuencias de movimientos, juegas con pequeñas restricciones – un agarre limitado, un objetivo concreto, una posición de la que debes escapar – y descubres la solución tú mismo. Proviene de la dinámica ecológica y la ciencia de la adquisición de habilidades, y por eso nuestras sesiones se sienten menos como copiar y más como resolver problemas.",
 "pt": "O Constraints-Led Approach (CLA) é uma forma moderna de aprender Jiu Jitsu. Em vez de decorar longas sequências de movimentos, você joga jogos com pequenas restrições – uma pegada limitada, um objetivo específico, uma posição da qual precisa escapar – e descobre a solução sozinho. Vem da dinâmica ecológica e da ciência da aquisição de habilidades, e é por isso que nossas sessões parecem menos cópia e mais resolução de problemas."
 },
