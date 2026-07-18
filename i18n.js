@@ -564,6 +564,12 @@
  },
  "The space": {
   "de": "Der Trainingsraum"
+ },
+ "Regular classes on Fridays at": {
+  "de": "Freitag beim"
+ },
+ "and Thursdays at": {
+  "de": "und Donnerstag bei"
  }
 };
   const norm = s => s.trim().replace(/[\u2019\u2018]/g, "'").replace(/[\u2014\u2013]/g, "-").replace(/\s+/g, ' ');
