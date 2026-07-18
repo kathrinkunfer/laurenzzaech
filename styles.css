@@ -270,12 +270,12 @@ details[open] .plus::after { opacity: 0; }
 .map-wrap iframe { display: block; width: 100%; height: clamp(320px, 52vh, 520px); border: 0; }
 .loc-meta { margin-top: 1.4rem; color: var(--ink-2); }
 .loc-meta a { color: var(--blue); font-weight: 600; }
-.loc-duo { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 1.1rem; margin-top: clamp(1.5rem,4vw,2.5rem); }
-.loc-duo figure { margin: 0; }
-.loc-duo img { width: 100%; height: clamp(320px, 44vw, 480px); object-fit: cover; object-position: center 32%; border-radius: var(--radius); display: block; }
+.loc-duo { display: grid; grid-template-columns: 1fr 2.2fr; gap: 1.1rem; margin-top: clamp(1.5rem,4vw,2.5rem); }
+.loc-duo figure { margin: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.loc-duo img { width: 100%; height: clamp(280px, 27vw, 360px); object-fit: cover; object-position: center 32%; display: block; }
 .loc-duo .map-wrap { margin-top: 0; }
-.loc-duo .map-wrap iframe { height: clamp(320px, 44vw, 480px); }
-@media (max-width: 820px) { .loc-duo { grid-template-columns: 1fr; } .loc-duo img { height: clamp(240px,60vw,360px); } .loc-duo .map-wrap iframe { height: clamp(280px,60vw,380px); } }
+.loc-duo .map-wrap iframe { height: clamp(280px, 27vw, 360px); }
+@media (max-width: 820px) { .loc-duo { grid-template-columns: 1fr; } .loc-duo img { height: clamp(200px,45vw,280px); } .loc-duo .map-wrap iframe { height: clamp(280px,60vw,380px); } }
 
 /* home closing CTA band */
 .closing { background: var(--black); color: #fff; text-align: center; padding: clamp(3.5rem,8vw,6rem) 0; }
