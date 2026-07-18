@@ -561,6 +561,9 @@
  },
  ", Binzstrasse 15, 8045 Zürich. Once you book, I'll send you everything you need to find the mats and get started.": {
   "de": " statt, Binzstrasse 15, 8045 Zürich. Nach deiner Buchung schicke ich dir alles, was du brauchst, um die Matten zu finden und loszulegen."
+ },
+ "The space": {
+  "de": "Der Trainingsraum"
  }
 };
   const norm = s => s.trim().replace(/[\u2019\u2018]/g, "'").replace(/[\u2014\u2013]/g, "-").replace(/\s+/g, ' ');

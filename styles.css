@@ -270,6 +270,12 @@ details[open] .plus::after { opacity: 0; }
 .map-wrap iframe { display: block; width: 100%; height: clamp(320px, 52vh, 520px); border: 0; }
 .loc-meta { margin-top: 1.4rem; color: var(--ink-2); }
 .loc-meta a { color: var(--blue); font-weight: 600; }
+.loc-sub { font-family: var(--font-title); font-weight: 700; letter-spacing: var(--ls-title); font-size: clamp(1.4rem,3.5vw,2rem); margin: clamp(2.6rem,6vw,3.6rem) 0 1.1rem; }
+.loc-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+.loc-gallery figure { margin: 0; }
+.loc-gallery img { width: 100%; height: clamp(300px,38vw,440px); object-fit: cover; border-radius: var(--radius); display: block; }
+.loc-gallery img.tall { object-position: center 32%; }
+@media (max-width: 820px) { .loc-gallery { grid-template-columns: 1fr; } .loc-gallery img { height: clamp(260px,70vw,400px); } }
 
 /* home closing CTA band */
 .closing { background: var(--black); color: #fff; text-align: center; padding: clamp(3.5rem,8vw,6rem) 0; }
